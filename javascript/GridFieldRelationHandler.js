@@ -1,12 +1,12 @@
 jQuery(function($) {
-	jQuery.entwine('ss', function($) {
-		jQuery('.ss-gridfield .ss-gridfield-item .col-noedit').entwine({
+	$.entwine('ss', function($) {
+		$('.grid-field .ss-gridfield-item .col-noedit').entwine({
 			onclick: function(e) {
 				e.stopPropagation();
 				e.stopImmediatePropagation();
 			}
 		});
-		jQuery('.ss-gridfield .ss-gridfield-item .col-noedit input').entwine({
+		$('.ss-gridfield .ss-gridfield-item .col-noedit input').entwine({
 			getState: function () {
 				return this.getGridField().getState().GridFieldRelationHandler;
 			},
@@ -15,7 +15,7 @@ jQuery(function($) {
 			},
 			onchange: function(e) {
 				var state = this.getState();
-				var input = jQuery(e.target).closest('input');
+				var input = $(e.target).closest('input');
 				if(input.hasClass('radio')) {
 					state.RelationVal = input.val();
 				} else if(input.hasClass('checkbox')) {
