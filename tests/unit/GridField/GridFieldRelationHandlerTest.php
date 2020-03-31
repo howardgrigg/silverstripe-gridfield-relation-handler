@@ -12,7 +12,7 @@ class GridFieldRelationHandlerTest extends SapphireTest
     public function testCreateGridFieldRelationHandler()
     {
         $gridFieldRelationHandler = new GridFieldHasOneRelationHandler(
-            FakeDataObject::create(),
+            FakePage::create(),
             'FakeDataObjects'
         );
 
@@ -22,8 +22,8 @@ class GridFieldRelationHandlerTest extends SapphireTest
     public function testGetAndSetColumnTitle()
     {
         $gridFieldRelationHandler = new GridFieldHasOneRelationHandler(
-            FakeDataObject::get(),
-            'FakeDataObjects'
+            FakePage::create(),
+            'FakeDataObject'
         );
 
         $gridFieldRelationHandler->setColumnTitle('Equality');
