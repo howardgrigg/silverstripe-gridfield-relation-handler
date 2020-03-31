@@ -13,7 +13,7 @@ class GridFieldRelationHandlerTest extends SapphireTest
     {
         $gridFieldRelationHandler = new GridFieldHasOneRelationHandler(
             FakePage::create(),
-            'FakeDataObjects'
+            'FakeDataObject'
         );
 
         $this->assertNotNull($gridFieldRelationHandler);
