@@ -6,7 +6,7 @@ use Page;
 
 class FakePage extends Page
 {
-    public static $has_one = [
+    private static $has_one = [
         'FakeDataObject' => FakeDataObject::class,
     ];
 }
