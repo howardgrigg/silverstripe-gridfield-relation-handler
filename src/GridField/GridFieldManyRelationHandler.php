@@ -107,8 +107,9 @@ class GridFieldManyRelationHandler extends GridFieldRelationHandler implements G
 
     protected function saveGridRelation(GridField $gridField, $arguments, $data)
     {
-        $state = $this->getState($gridField);
-        $gridField->getList()->setByIdList($state->RelationVal->toArray());
+        $relationName = $this->relationName($gridField);
+        $items = isset($data[$relationName]) ? $data[$relationName] : [];
+        $gridField->getList()->setByIdList($items);
         parent::saveGridRelation($gridField, $arguments, $data);
     }
 }

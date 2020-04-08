@@ -37,7 +37,7 @@ it for the pagination to work properly.
 
 	:::php
 	// The second argument here ensures that this component is placed before any GridFieldPaginator
-	$config->addComponent(new GridFieldManyRelationHandler(), 'GridFieldPaginator');
+	$config->addComponent(new GridFieldManyRelationHandler(), GridFieldPaginator::class);
 
 ## License
 
